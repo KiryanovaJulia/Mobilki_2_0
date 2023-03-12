@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Pr!</string>
-    <string name="sign_in">Авторизация</string>
-    <string name="login">Логин</string>
-    <string name="passwd">Пароль</string>
-</resources>

@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Pr_2</string>
-    <string name="sign_in">Авторизация</string>
-    <string name="login">Логин</string>
-    <string name="passwd">Пароль</string>
-    <string name="buttn_sign">Вход</string>
-    <string name="log_in">Регистрация</string>
-</resources>
