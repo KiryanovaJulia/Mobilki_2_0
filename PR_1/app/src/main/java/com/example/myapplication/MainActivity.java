@@ -12,12 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("myLogs", "onStart");
-        Log.e("myLogs", "onStart");
-        Log.i("myLogs", "onStart");
-        Log.v("myLogs", "onStart");
-        Log.w("myLogs", "onStart");
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show();
+        Log.d("myLogs", "onCreate");
+        Log.e("myLogs", "onCreate");
+        Log.i("myLogs", "onCreate");
+        Log.v("myLogs", "onCreate");
+        Log.w("myLogs", "onCreate");
+        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
     }
 
     @Override
