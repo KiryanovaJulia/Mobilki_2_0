@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,18 @@ public class HomeFrame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_frame);
 
+
+      //  TextView text = findViewById(R.id.name);
+        Bundle arguments = getIntent().getExtras();
+
+        if(arguments!=null){
+            String name = arguments.get("name").toString();
+            TextView textView = (TextView)findViewById(R.id.name);
+            textView.setText("Name: " + name);
+        }
+
     }
+
 
     @Override
     protected void onStart() {

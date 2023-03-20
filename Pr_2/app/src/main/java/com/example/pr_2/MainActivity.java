@@ -20,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+//    View.OnClickListener Listen = new View.OnClickListener(){
+//      public void onClick(View v)
+//        {
+//            Log.d(TAG,"Кнопка нажата");
+//        }
+//    };
+
+
     public void buttonClick(View view)
     {
         final EditText login = (EditText)findViewById(R.id.log);
@@ -30,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(myIntent);
             }
         Log.d(TAG,"Кнопка нажата");
+
+        EditText nameText = findViewById(R.id.log);
+
+        String name = nameText.getText().toString();
+
+        Intent intent = new Intent(this, HomeFrame.class);
+        intent.putExtra("name", name);
+        startActivity(intent);
     }
 
 }
