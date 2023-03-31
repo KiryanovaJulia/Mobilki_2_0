@@ -1,6 +1,7 @@
 package com.example.pr_2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.nfc.Tag;
@@ -19,13 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-
-//    View.OnClickListener Listen = new View.OnClickListener(){
-//      public void onClick(View v)
-//        {
-//            Log.d(TAG,"Кнопка нажата");
-//        }
-//    };
 
 
     public void buttonClick(View view)
@@ -46,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, HomeFrame.class);
         intent.putExtra("name", name);
         startActivity(intent);
+
+
+
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .add(R.id.imageButton2, new Fragments())
+                .commit();
     }
+
 
 }
