@@ -21,18 +21,18 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     private final LayoutInflater inflater;
     private final List<ListPart> items;
 
-    public CustomRecyclerViewAdapter(Context context, List<ListPart>
-            items) {
-        this.items = items;
-        this.inflater = LayoutInflater.from(context);
-    }
-
     @Override
     public CustomRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view = inflater.inflate(R.layout.f3_list_item, parent,
                 false);
         return new ViewHolder(view);
+    }
+
+    public CustomRecyclerViewAdapter(Context context, List<ListPart>
+            items) {
+        this.items = items;
+        this.inflater = LayoutInflater.from(context);
     }
 
 

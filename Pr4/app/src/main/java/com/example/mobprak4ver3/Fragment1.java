@@ -32,15 +32,6 @@ public class Fragment1 extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment1.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Fragment1 newInstance(String param1, String param2) {
         Fragment1 fragment = new Fragment1();
         Bundle args = new Bundle();
@@ -69,14 +60,18 @@ public class Fragment1 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         Button f1 = rootView.findViewById(R.id.button);
-        Button f2 = rootView.findViewById(R.id.button2);
         f1.setOnClickListener((f11)->{
-            getParentFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.fragmentContainerView, Fragment2.class, null).commit();
+            getParentFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.fragmentContainerView,
+                    Fragment2.class, null).commit();
 
         } );
+
+        Button f2 = rootView.findViewById(R.id.button2);
         f2.setOnClickListener((f21)->{
-            getParentFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.fragmentContainerView, Fragment3.class, null).commit();
+            getParentFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.fragmentContainerView,
+                    Fragment3.class, null).commit();
         });
 
     }
